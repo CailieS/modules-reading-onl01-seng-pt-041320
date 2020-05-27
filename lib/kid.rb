@@ -5,7 +5,9 @@ class Kid
  extend MetaDancing
  include Dance
  attr_accessor :name
- 
+ extend FancyDance::ClassMethods
+ include FancyDance::InstanceMethods
+  
   def initialize(name)
     @name = name
   end
